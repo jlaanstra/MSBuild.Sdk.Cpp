@@ -1,0 +1,1 @@
+# MSBuild.Sdk.Cpp
