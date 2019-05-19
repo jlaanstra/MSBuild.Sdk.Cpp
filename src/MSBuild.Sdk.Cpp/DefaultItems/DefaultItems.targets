@@ -1,0 +1,13 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+    <PropertyGroup>
+        <MSBuildAllProjects Condition=" '$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0' ">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    </PropertyGroup>
+
+    <Import Project="$(MSBuildThisFileDirectory)Platforms\Common.targets"/>
+
+    <Import Project="$(MSBuildThisFileDirectory)Platforms\Cpp.targets"/>
+
+    <Import Project="$(MSBuildThisFileDirectory)Platforms\Xaml.targets" />
+
+</Project>

@@ -1,0 +1,21 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+    <PropertyGroup>
+        <MSBuildAllProjects Condition=" '$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0' ">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <DefaultLanguageSourceExtension>.cpp</DefaultLanguageSourceExtension>
+        <Language>C++</Language>
+        <TargetRuntime>Native</TargetRuntime>
+    </PropertyGroup>
+
+    <Import Project="$(MSBuildThisFileDirectory)DisableManagedFrameworkResolution.targets"/>
+    <Import Project="$(MSBuildThisFileDirectory)DesignTime.targets"/>
+
+    <Import Project="$(MSBuildThisFileDirectory)..\DefaultItems\DefaultItems.targets"/>
+    <Import Project="$(MSBuildThisFileDirectory)..\ProjectSystem\ProjectSystem.targets"/>
+
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+
+</Project>

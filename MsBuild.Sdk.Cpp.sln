@@ -1,0 +1,59 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.452
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{57C012F9-3CAC-47D5-A3A3-D89169B45646}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{83932396-F6B5-452C-91EC-8C4C06B4E034}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSBuild.Sdk.Cpp", "src\MSBuild.Sdk.Cpp\MSBuild.Sdk.Cpp.csproj", "{42107680-893F-4DF7-8891-AA8DA9533C5F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestApp", "test\TestApp\TestApp.csproj", "{23011A4B-2E19-414C-ADB1-89758F5DAC9C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{42107680-893F-4DF7-8891-AA8DA9533C5F}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{42107680-893F-4DF7-8891-AA8DA9533C5F}.Debug|ARM.Build.0 = Debug|Any CPU
+		{42107680-893F-4DF7-8891-AA8DA9533C5F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{42107680-893F-4DF7-8891-AA8DA9533C5F}.Debug|x64.Build.0 = Debug|Any CPU
+		{42107680-893F-4DF7-8891-AA8DA9533C5F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{42107680-893F-4DF7-8891-AA8DA9533C5F}.Debug|x86.Build.0 = Debug|Any CPU
+		{42107680-893F-4DF7-8891-AA8DA9533C5F}.Release|ARM.ActiveCfg = Release|Any CPU
+		{42107680-893F-4DF7-8891-AA8DA9533C5F}.Release|ARM.Build.0 = Release|Any CPU
+		{42107680-893F-4DF7-8891-AA8DA9533C5F}.Release|x64.ActiveCfg = Release|Any CPU
+		{42107680-893F-4DF7-8891-AA8DA9533C5F}.Release|x64.Build.0 = Release|Any CPU
+		{42107680-893F-4DF7-8891-AA8DA9533C5F}.Release|x86.ActiveCfg = Release|Any CPU
+		{42107680-893F-4DF7-8891-AA8DA9533C5F}.Release|x86.Build.0 = Release|Any CPU
+		{23011A4B-2E19-414C-ADB1-89758F5DAC9C}.Debug|ARM.ActiveCfg = Debug|ARM
+		{23011A4B-2E19-414C-ADB1-89758F5DAC9C}.Debug|ARM.Build.0 = Debug|ARM
+		{23011A4B-2E19-414C-ADB1-89758F5DAC9C}.Debug|x64.ActiveCfg = Debug|x64
+		{23011A4B-2E19-414C-ADB1-89758F5DAC9C}.Debug|x64.Build.0 = Debug|x64
+		{23011A4B-2E19-414C-ADB1-89758F5DAC9C}.Debug|x86.ActiveCfg = Debug|Win32
+		{23011A4B-2E19-414C-ADB1-89758F5DAC9C}.Debug|x86.Build.0 = Debug|Win32
+		{23011A4B-2E19-414C-ADB1-89758F5DAC9C}.Release|ARM.ActiveCfg = Release|ARM
+		{23011A4B-2E19-414C-ADB1-89758F5DAC9C}.Release|ARM.Build.0 = Release|ARM
+		{23011A4B-2E19-414C-ADB1-89758F5DAC9C}.Release|x64.ActiveCfg = Release|x64
+		{23011A4B-2E19-414C-ADB1-89758F5DAC9C}.Release|x64.Build.0 = Release|x64
+		{23011A4B-2E19-414C-ADB1-89758F5DAC9C}.Release|x86.ActiveCfg = Release|Win32
+		{23011A4B-2E19-414C-ADB1-89758F5DAC9C}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{42107680-893F-4DF7-8891-AA8DA9533C5F} = {57C012F9-3CAC-47D5-A3A3-D89169B45646}
+		{23011A4B-2E19-414C-ADB1-89758F5DAC9C} = {83932396-F6B5-452C-91EC-8C4C06B4E034}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		        SolutionGuid = {D67D3FA2-2AD1-43CC-99A9-C19ED9CCAAC7}
+		SolutionGuid = {51E65913-847B-49AD-98D9-CC6DB7C9AE14}
+	EndGlobalSection
+EndGlobal

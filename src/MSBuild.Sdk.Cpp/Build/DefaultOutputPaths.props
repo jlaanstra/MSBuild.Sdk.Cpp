@@ -1,0 +1,25 @@
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+    <PropertyGroup>
+        <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+
+        <Configuration Condition="'$(Configuration)'==''">Debug</Configuration>
+        <Platform Condition="'$(Platform)'==''">x64</Platform>
+        <PlatformName Condition="'$(PlatformName)' == ''">$(Platform)</PlatformName>
+
+        <!-- Consistent output directory for AppContainer and non-AppContainer projects -->
+        <!-- Build overrides the roots. -->
+        <GenerateProjectSpecificOutputFolder>false</GenerateProjectSpecificOutputFolder>
+        <OutDirWasSpecified>true</OutDirWasSpecified>
+        <BaseOutputPath Condition="'$(BaseOutputPath)' == ''" >$(SolutionDir)bin\$(Platform)\$(Configuration)\</BaseOutputPath>
+        <OutputPath>$(BaseOutputPath)$(MSBuildProjectName)\</OutputPath>
+        <!-- Various cpp props/targets use this-->
+        <OutDir>$(OutputPath)</OutDir>
+        <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)' == ''" >$(SolutionDir)obj\$(Platform)\$(Configuration)\</BaseIntermediateOutputPath>
+        <IntermediateOutputPath>$(BaseIntermediateOutputPath)$(MSBuildProjectName)\</IntermediateOutputPath>
+        <!-- Various cpp props/targets use this-->
+        <IntDir>$(IntermediateOutputPath)</IntDir>
+        <GeneratedFilesDir>$(IntermediateOutputPath)Generated Files\</GeneratedFilesDir>
+    </PropertyGroup>
+
+</Project>

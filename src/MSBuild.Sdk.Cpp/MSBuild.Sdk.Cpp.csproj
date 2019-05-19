@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Build">
+    <TargetFramework>netstandard1.0</TargetFramework>
+    <PackageOnlyBuild>true</PackageOnlyBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Label="PackageInfo">
+    <Title>MSBuild Sdk for C++</Title>
+    <PackageTags>msbuild c++ winrt</PackageTags>
+    <Summary>An MSBuild SDK package for SDK-style projects that enables building UWP apps with C++/WinRT.</Summary>
+    <Description>AAn MSBuild SDK package for SDK-style projects that enables building UWP apps with C++/WinRT.</Description>
+  </PropertyGroup>
+
+</Project>

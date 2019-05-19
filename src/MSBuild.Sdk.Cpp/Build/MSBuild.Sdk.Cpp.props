@@ -1,0 +1,74 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+    <PropertyGroup>
+        <MSBuildAllProjects Condition=" '$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0' ">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    </PropertyGroup>
+
+    <ItemGroup Label="ProjectConfigurations">
+        <ProjectConfiguration Include="Debug|ARM">
+            <Configuration>Debug</Configuration>
+            <Platform>ARM</Platform>
+        </ProjectConfiguration>
+        <ProjectConfiguration Include="Debug|Win32">
+            <Configuration>Debug</Configuration>
+            <Platform>Win32</Platform>
+        </ProjectConfiguration>
+        <ProjectConfiguration Include="Debug|x64">
+            <Configuration>Debug</Configuration>
+            <Platform>x64</Platform>
+        </ProjectConfiguration>
+        <ProjectConfiguration Include="Release|ARM">
+            <Configuration>Release</Configuration>
+            <Platform>ARM</Platform>
+        </ProjectConfiguration>
+        <ProjectConfiguration Include="Release|Win32">
+            <Configuration>Release</Configuration>
+            <Platform>Win32</Platform>
+        </ProjectConfiguration>
+        <ProjectConfiguration Include="Release|x64">
+            <Configuration>Release</Configuration>
+            <Platform>x64</Platform>
+        </ProjectConfiguration>
+    </ItemGroup>
+
+    <PropertyGroup>
+        <ProjectName Condition=" '$(ProjectName)' == '' ">$(MSBuildProjectName)</ProjectName>
+        <RootNamespace Condition=" '$(RootNamespace)' == '' ">$(MSBuildProjectName)</RootNamespace>
+        <DefaultLanguage Condition="'$(DefaultLanguage)' == ''">en-US</DefaultLanguage>
+        <MinimumVisualStudioVersion  Condition="'$(MinimumVisualStudioVersion)' == ''">15.0</MinimumVisualStudioVersion>
+        <ConfigurationType  Condition="'$(ConfigurationType)' == ''">Application</ConfigurationType>
+        <PlatformToolset Condition="'$(PlatformToolset)' == '' AND '$(VisualStudioVersion)' == '16.0'">v142</PlatformToolset>
+        <PlatformToolset Condition="'$(PlatformToolset)' == '' AND '$(VisualStudioVersion)' == '15.0'">v141</PlatformToolset>
+        <PlatformToolset Condition="'$(PlatformToolset)' == ''">v140</PlatformToolset>
+        <CharacterSet Condition="'$(CharacterSet)' == ''">Unicode</CharacterSet>
+        <TargetFrameworkIdentifier>native</TargetFrameworkIdentifier>
+        <TargetFrameworkIdentifier>native</TargetFrameworkIdentifier>
+        <TargetFramework>native,Version=v0.0</TargetFramework>
+        <NuGetTargetMoniker>native,Version=v0.0</NuGetTargetMoniker>
+
+        <!-- NuGet should always restore .NET SDK projects with "PackageReference" style restore.  Setting this property will
+         cause the right thing to happen even if there aren't any PackageReference items in the project, such as when
+         a project targets .NET Framework and doesn't have any direct package dependencies. -->
+        <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)'=='Debug'">
+        <UseDebugLibraries>true</UseDebugLibraries>
+        <LinkIncremental>true</LinkIncremental>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)'=='Release'">
+        <UseDebugLibraries>false</UseDebugLibraries>
+        <WholeProgramOptimization>true</WholeProgramOptimization>
+        <LinkIncremental>false</LinkIncremental>
+    </PropertyGroup>
+
+    <!-- Set default intermediate and output paths -->
+    <Import Project="$(MSBuildThisFileDirectory)DefaultOutputPaths.props" />
+
+    <Import Project="$(MSBuildThisFileDirectory)..\DefaultItems\DefaultItems.props"/>
+    <Import Project="$(MSBuildThisFileDirectory)..\ProjectSystem\ProjectSystem.props"/>
+
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+
+</Project>

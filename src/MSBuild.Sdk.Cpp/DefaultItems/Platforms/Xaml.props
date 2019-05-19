@@ -1,0 +1,61 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <MSBuildAllProjects Condition=" '$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0' ">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+  </PropertyGroup>
+
+    <ItemGroup Condition=" '$(EnableDefaultItems)' == 'true' ">
+        <AppxManifest Include="Package.appxmanifest" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" />
+    </ItemGroup>
+
+  <ItemDefinitionGroup>
+    <Page>
+      <SubType>Designer</SubType>
+    </Page>
+    <Resource>
+      <SubType>Designer</SubType>
+    </Resource>
+    <ApplicationDefinition>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+      <AppxManifest>
+          <SubType>Designer</SubType>
+      </AppxManifest>
+  </ItemDefinitionGroup>
+
+    <ItemGroup>
+        <None Remove="$(ApplicationDefinitionFile)"/>
+        <ApplicationDefinition Include="$(ApplicationDefinitionFile)" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" />
+        <UpToDateCheckInput Include="@(ApplicationDefinition)"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove="**\*.xaml"/>
+        <Page Include="**\*.xaml" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder);$(ExtrasDefaultPageExcludes)" />
+        <UpToDateCheckInput Include="@(Page)"/>
+    </ItemGroup>
+
+    <!-- Xaml compiler requires the DependentUpon to be set -->
+    <ItemGroup>
+        <ClCompile Update="**\*.cpp">
+            <DependentUpon>%(Filename).xaml</DependentUpon>
+        </ClCompile>
+    </ItemGroup>
+
+    <!-- Xaml compiler requires the DependentUpon to be set -->
+    <ItemGroup>
+        <ClInclude Update="**\*.h">
+            <DependentUpon>%(Filename).xaml</DependentUpon>
+        </ClInclude>
+    </ItemGroup>
+
+    <!-- Indicate that this is the Precompiled header -->
+    <ItemGroup>
+        <ClCompile Remove="pch.cpp"/>
+        <PrecompiledHeader Include="pch.cpp" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)">
+            <PrecompiledHeader>Create</PrecompiledHeader>
+        </PrecompiledHeader>
+        <ClCompile Include="@(PrecompiledHeader)"/>
+    </ItemGroup>
+
+</Project>
