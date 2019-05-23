@@ -1,56 +1,87 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<!--Copyright (c) Microsoft.  All Rights Reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.-->
+<?xml version="1.0" encoding="utf-8" ?>
+<!--  Copyright (c) Microsoft.  All Rights Reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.  -->
 <Rule
-  Name="None"
-  PageTemplate="generic"
-  PropertyPagesHidden="true"
-  xmlns="http://schemas.microsoft.com/build/2009/properties">
-  <Rule.DataSource>
-    <DataSource Persistence="ProjectFile" HasConfigurationCondition="False" ItemType="None" SourceOfDefaultValue="AfterContext" />
-  </Rule.DataSource>
+    xmlns="http://schemas.microsoft.com/build/2009/properties"
+    Name="None"
+    PageTemplate="generic"
+    PropertyPagesHidden="true">
+    <Rule.DataSource>
+        <DataSource
+            HasConfigurationCondition="False"
+            ItemType="None"
+            Persistence="ProjectFile"
+            SourceOfDefaultValue="AfterContext" />
+    </Rule.DataSource>
 
-  <DynamicEnumProperty Name="{}{ItemType}"
-                   EnumProvider="ItemTypes" />
-  <EnumProperty
-    Name="CopyToOutputDirectory">
-    <EnumValue Name="Never" />
-    <EnumValue Name="Always" />
-    <EnumValue Name="PreserveNewest" />
-  </EnumProperty>
+    <DynamicEnumProperty Name="{}{ItemType}" EnumProvider="ItemTypes" />
 
-  <StringProperty
-    Name="Generator" />
-  <StringProperty
-    Name="CustomToolNamespace" />
+    <BoolProperty Name="AutoGen" Visible="false" />
 
-  <StringProperty Name="LastGenOutput" Visible="false" />
-  <BoolProperty Name="DesignTime" Visible="false" />
-  <BoolProperty Name="AutoGen" Visible="false" />
-  <StringProperty Name="CustomTool" Visible="false">
-    <StringProperty.DataSource>
-      <DataSource Persistence="ProjectFile" ItemType="None" PersistedName="Generator" HasConfigurationCondition="False" SourceOfDefaultValue="AfterContext" />
-    </StringProperty.DataSource>
-  </StringProperty>
+    <EnumProperty Name="CopyToOutputDirectory">
+        <EnumValue Name="Never" />
+        <EnumValue Name="Always" />
+        <EnumValue Name="PreserveNewest" />
+    </EnumProperty>
 
-  <StringProperty Name="FullPath" Visible="false" ReadOnly="true">
-    <StringProperty.DataSource>
-      <DataSource Persistence="Intrinsic" ItemType="None" PersistedName="FullPath" SourceOfDefaultValue="AfterContext" />
-    </StringProperty.DataSource>
-  </StringProperty>
+    <StringProperty Name="CustomTool" Visible="false">
+        <StringProperty.DataSource>
+            <DataSource
+                HasConfigurationCondition="False"
+                ItemType="None"
+                PersistedName="Generator"
+                Persistence="ProjectFile"
+                SourceOfDefaultValue="AfterContext" />
+        </StringProperty.DataSource>
+    </StringProperty>
 
-  <BoolProperty Name="Visible" Visible="false" />
-  <StringProperty Name="DependentUpon" Visible="false">
-    <StringProperty.Metadata>
-      <NameValuePair Name="DoNotCopyAcrossProjects" Value="true" />
-    </StringProperty.Metadata>
-  </StringProperty>
-  <StringProperty Name="Link" Visible="false">
-    <StringProperty.DataSource>
-      <DataSource PersistenceStyle="Attribute" SourceOfDefaultValue="AfterContext" />
-    </StringProperty.DataSource>
-    <StringProperty.Metadata>
-      <NameValuePair Name="DoNotCopyAcrossProjects" Value="true" />
-    </StringProperty.Metadata>
-  </StringProperty>
+    <StringProperty Name="CustomToolNamespace" />
+
+    <StringProperty Name="DependentUpon" Visible="false">
+        <StringProperty.Metadata>
+            <NameValuePair Name="DoNotCopyAcrossProjects" Value="true" />
+        </StringProperty.Metadata>
+    </StringProperty>
+
+    <BoolProperty Name="DesignTime" Visible="false" />
+
+    <BoolProperty Name="DesignTimeSharedInput" Visible="false" />
+
+    <StringProperty
+        Name="FullPath"
+        ReadOnly="true"
+        Visible="false">
+        <StringProperty.DataSource>
+            <DataSource
+                ItemType="None"
+                PersistedName="FullPath"
+                Persistence="Intrinsic"
+                SourceOfDefaultValue="AfterContext" />
+        </StringProperty.DataSource>
+    </StringProperty>
+
+    <StringProperty Name="Generator" />
+
+    <StringProperty Name="LastGenOutput" Visible="false" />
+
+    <StringProperty Name="Link" Visible="false">
+        <StringProperty.DataSource>
+            <DataSource PersistenceStyle="Attribute" SourceOfDefaultValue="AfterContext" />
+        </StringProperty.DataSource>
+        <StringProperty.Metadata>
+            <NameValuePair Name="DoNotCopyAcrossProjects" Value="true" />
+        </StringProperty.Metadata>
+    </StringProperty>
+
+    <StringProperty Name="SubType" Visible="false">
+        <StringProperty.DataSource>
+            <DataSource
+                HasConfigurationCondition="false"
+                ItemType="None"
+                PersistedName="SubType"
+                Persistence="DesignTimeItemPropertiesStorage" />
+        </StringProperty.DataSource>
+    </StringProperty>
+
+    <BoolProperty Name="Visible" Visible="false" />
 
 </Rule>
