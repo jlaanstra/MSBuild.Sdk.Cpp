@@ -5,12 +5,11 @@
     </PropertyGroup>
 
     <ItemGroup Condition=" '$(EnableDefaultItems)' == 'true' ">
-        <ClInclude Include="**/*.h;**/*.hpp" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
-        <ClCompile Include="**/*.c;**/*.cpp" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
-        <Midl Include="**/*.idl" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
-    </ItemGroup>
-    <ItemGroup Condition=" '$(EnableDefaultItems)' == 'true' And '$(EnableDefaultNoneItems)' == 'true' ">
-        <None Include="**/*" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" />
+        <ClInclude Include="**/*.h;**/*.hpp;**/*.hxx" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" Condition=" '$(EnableDefaultClIncludeItems)' == 'true' " />
+        <ClCompile Include="**/*.c;**/*.cpp;**/*.cxx" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" Condition=" '$(EnableDefaultClCompileItems)' == 'true' " />
+        <Midl Include="**/*.idl" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" Condition=" '$(EnableDefaultMidlItems)' == 'true' " />
+        <Content Include="**/*.txt;**/*.html;**/*.htm;**/*.css;**/*.js;**/*.xml;**/*.mht;**/*.json;**/*.jpeg;**/*.jpe;**/*.jpg;**/*.jfif;**/*.exif;**/*.gif;**/*.tiff;**/*.tif;**/*.png;**/*.bmp;**/*.dib;**/*.rle;**/*.ico;**/*.wdp;**/*.dds;**/*.tga;**/*.wav;**/*.wma;**/*.au;**/*.aif;**/*.aiff;**/*.aifc;**/*.mid;**/*.midi;**/*.mp3;**/*.snd;**/*.rmi;**/*.avi;**/*.wmv;**/*.mov;**/*.qt;**/*.mpe;**/*.mpeg;**/*.mpg;**/*.mp2;**/*.mp4;**/*.asx;**/*.asf;**/*.webm;**/*.ttf;**/*.odttf;**/*.otf;**/*.compositefont;**/*.ttc;**/*.tte;**/*.woff;**/*.eot;" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" Condition=" '$(EnableDefaultContentItems)' == 'true' " />
+        <None Include="**/*" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" Condition="'$(EnableDefaultNoneItems)' == 'true' "/>
     </ItemGroup>
 
     <ItemGroup>
@@ -19,6 +18,8 @@
     </ItemGroup>
 
     <ItemDefinitionGroup>
+        <ClInclude>
+        </ClInclude>
         <ClCompile>
             <PrecompiledHeader>Use</PrecompiledHeader>
             <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
@@ -27,6 +28,16 @@
             <AdditionalOptions>%(AdditionalOptions) /bigobj </AdditionalOptions>
             <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
         </ClCompile>
+        <!--
+        We use simplified item groups.
+        Set the DeploymentContent property appropriately.
+        -->
+        <Content>
+            <DeploymentContent>true</DeploymentContent>
+        </Content>
+        <None>
+            <DeploymentContent>false</DeploymentContent>
+        </None>
     </ItemDefinitionGroup>
     <ItemDefinitionGroup Condition="'$(Configuration)'=='Debug'">
         <ClCompile>

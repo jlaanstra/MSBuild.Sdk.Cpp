@@ -12,4 +12,148 @@
     <Description>AAn MSBuild SDK package for SDK-style projects that enables building UWP apps with C++/WinRT.</Description>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Update="DesignTime\Rules\AnalyzerReference.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="DesignTime\Rules\AppDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="DesignTime\Rules\ApplicationDefinition.BrowseObject.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="DesignTime\Rules\AssemblyReference.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="DesignTime\Rules\Compile.BrowseObject.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="DesignTime\Rules\Compile.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="DesignTime\Rules\CompilerCommandLineArgs.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="DesignTime\Rules\COMReference.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="DesignTime\Rules\ConfigurationGeneral.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="DesignTime\Rules\Content.BrowseObject.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="DesignTime\Rules\Content.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="DesignTime\Rules\CopyUpToDateMarker.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="DesignTime\Rules\Cpp.ProjectItemsSchema - Copy.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="DesignTime\Rules\CSharp.ProjectItemsSchema.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="DesignTime\Rules\DebuggerGeneral.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="DesignTime\Rules\Default.ProjectItemsSchema.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="DesignTime\Rules\DotNetCliToolReference.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="DesignTime\Rules\Folder.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="DesignTime\Rules\FSharp.ProjectItemsSchema.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="DesignTime\Rules\GeneralBrowseObject.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="DesignTime\Rules\GeneralConfiguredBrowseObject.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="DesignTime\Rules\LanguageService.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="DesignTime\Rules\None.BrowseObject.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="DesignTime\Rules\None.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="DesignTime\Rules\NuGetRestore.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="DesignTime\Rules\PackageReference.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="DesignTime\Rules\Page.BrowseObject.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="DesignTime\Rules\ProjectDebugger.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="DesignTime\Rules\ProjectItemsSchema.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="DesignTime\Rules\ProjectReference.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="DesignTime\Rules\ResolvedAnalyzerReference.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="DesignTime\Rules\ResolvedAssemblyReference.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="DesignTime\Rules\ResolvedCompilationReference.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="DesignTime\Rules\ResolvedCOMReference.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="DesignTime\Rules\ResolvedPackageReference.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="DesignTime\Rules\ResolvedProjectReference.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="DesignTime\Rules\ResolvedSdkReference.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="DesignTime\Rules\SdkReference.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="DesignTime\Rules\SourceControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="DesignTime\Rules\SpecialFolder.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="DesignTime\Rules\SubProject.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="DesignTime\Rules\UpToDateCheckBuilt.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="DesignTime\Rules\UpToDateCheckInput.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="DesignTime\Rules\UpToDateCheckOutput.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="DesignTime\Rules\VisualBasic.NamespaceImport.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="DesignTime\Rules\VisualBasic.ProjectItemsSchema.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="DesignTime\Rules\Xaml.ProjectItemsSchema.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+  </ItemGroup>
+
 </Project>

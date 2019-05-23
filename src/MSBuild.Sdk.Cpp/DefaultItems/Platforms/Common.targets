@@ -6,7 +6,10 @@
 
     <PropertyGroup>
         <EnableDefaultItems Condition=" '$(EnableDefaultItems)' == '' ">true</EnableDefaultItems>
-        <EnableDefaultCompileItems Condition=" '$(EnableDefaultCompileItems)' == '' ">true</EnableDefaultCompileItems>
+        <EnableDefaultClCompileItems Condition=" '$(EnableDefaultClCompileItems)' == '' ">true</EnableDefaultClCompileItems>
+        <EnableDefaultClIncludeItems Condition=" '$(EnableDefaultClIncludeItems)' == '' ">true</EnableDefaultClIncludeItems>
+        <EnableDefaultMidlItems Condition=" '$(EnableDefaultMidlItems)' == '' ">true</EnableDefaultMidlItems>
+        <EnableDefaultContentItems Condition=" '$(EnableDefaultNoneItems)' == '' ">true</EnableDefaultContentItems>
         <EnableDefaultNoneItems Condition=" '$(EnableDefaultNoneItems)' == '' ">true</EnableDefaultNoneItems>
     </PropertyGroup>
 
@@ -78,11 +81,11 @@
             <Link Condition="'%(Link)' == '' And '%(DefiningProjectExtension)' != '.projitems' And !$([MSBuild]::ValueOrDefault('%(FullPath)', '').StartsWith($([MSBuild]::EnsureTrailingSlash($(MSBuildProjectDirectory)))))">%(LinkBase)%(RecursiveDir)%(Filename)%(Extension)</Link>
         </ClCompile>
 
-        <AdditionalFiles Update="@(AdditionalFiles)">
+        <Midl Update="@(Midl)">
             <LinkBase Condition="'%(LinkBase)' != ''">$([MSBuild]::EnsureTrailingSlash(%(LinkBase)))</LinkBase>
             <Link Condition="'%(Link)' == '' And '%(DefiningProjectExtension)' != '.projitems' And !$([MSBuild]::ValueOrDefault('%(FullPath)', '').StartsWith($([MSBuild]::EnsureTrailingSlash($(MSBuildProjectDirectory)))))">%(LinkBase)%(RecursiveDir)%(Filename)%(Extension)</Link>
-        </AdditionalFiles>
-
+        </Midl>
+        
         <None Update="@(None)">
             <LinkBase Condition="'%(LinkBase)' != ''">$([MSBuild]::EnsureTrailingSlash(%(LinkBase)))</LinkBase>
             <Link Condition="'%(Link)' == '' And '%(DefiningProjectExtension)' != '.projitems' And !$([MSBuild]::ValueOrDefault('%(FullPath)', '').StartsWith($([MSBuild]::EnsureTrailingSlash($(MSBuildProjectDirectory)))))">%(LinkBase)%(RecursiveDir)%(Filename)%(Extension)</Link>

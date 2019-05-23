@@ -1,0 +1,175 @@
+{
+  "version": 3,
+  "targets": {
+    "native,Version=v0.0": {
+      "Microsoft.Windows.CppWinRT/2.0.190506.1": {
+        "type": "package",
+        "build": {
+          "build/native/Microsoft.Windows.CppWinRT.props": {},
+          "build/native/Microsoft.Windows.CppWinRT.targets": {}
+        }
+      }
+    },
+    "native,Version=v0.0/win10-arm": {
+      "Microsoft.Windows.CppWinRT/2.0.190506.1": {
+        "type": "package",
+        "build": {
+          "build/native/Microsoft.Windows.CppWinRT.props": {},
+          "build/native/Microsoft.Windows.CppWinRT.targets": {}
+        }
+      }
+    },
+    "native,Version=v0.0/win10-arm-aot": {
+      "Microsoft.Windows.CppWinRT/2.0.190506.1": {
+        "type": "package",
+        "build": {
+          "build/native/Microsoft.Windows.CppWinRT.props": {},
+          "build/native/Microsoft.Windows.CppWinRT.targets": {}
+        }
+      }
+    },
+    "native,Version=v0.0/win10-arm64-aot": {
+      "Microsoft.Windows.CppWinRT/2.0.190506.1": {
+        "type": "package",
+        "build": {
+          "build/native/Microsoft.Windows.CppWinRT.props": {},
+          "build/native/Microsoft.Windows.CppWinRT.targets": {}
+        }
+      }
+    },
+    "native,Version=v0.0/win10-x64": {
+      "Microsoft.Windows.CppWinRT/2.0.190506.1": {
+        "type": "package",
+        "build": {
+          "build/native/Microsoft.Windows.CppWinRT.props": {},
+          "build/native/Microsoft.Windows.CppWinRT.targets": {}
+        }
+      }
+    },
+    "native,Version=v0.0/win10-x64-aot": {
+      "Microsoft.Windows.CppWinRT/2.0.190506.1": {
+        "type": "package",
+        "build": {
+          "build/native/Microsoft.Windows.CppWinRT.props": {},
+          "build/native/Microsoft.Windows.CppWinRT.targets": {}
+        }
+      }
+    },
+    "native,Version=v0.0/win10-x86": {
+      "Microsoft.Windows.CppWinRT/2.0.190506.1": {
+        "type": "package",
+        "build": {
+          "build/native/Microsoft.Windows.CppWinRT.props": {},
+          "build/native/Microsoft.Windows.CppWinRT.targets": {}
+        }
+      }
+    },
+    "native,Version=v0.0/win10-x86-aot": {
+      "Microsoft.Windows.CppWinRT/2.0.190506.1": {
+        "type": "package",
+        "build": {
+          "build/native/Microsoft.Windows.CppWinRT.props": {},
+          "build/native/Microsoft.Windows.CppWinRT.targets": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Microsoft.Windows.CppWinRT/2.0.190506.1": {
+      "sha512": "Q1r01smX+oFlnME5j1tHH/kF7l0KstTf5pDnjQu5kenQY8sL2mVpKpxAxRf7j+HI+km7n9XztIhrA4el01yo9g==",
+      "type": "package",
+      "path": "microsoft.windows.cppwinrt/2.0.190506.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "bin/cppwinrt.exe",
+        "build/native/Microsoft.Windows.CppWinRT.FastAbi.targets",
+        "build/native/Microsoft.Windows.CppWinRT.props",
+        "build/native/Microsoft.Windows.CppWinRT.targets",
+        "microsoft.windows.cppwinrt.2.0.190506.1.nupkg.sha512",
+        "microsoft.windows.cppwinrt.nuspec",
+        "readme.txt",
+        "src/arm/thunks.asm",
+        "src/arm64/thunks.asm",
+        "src/thunks.inc",
+        "src/x64/thunks.asm",
+        "src/x86/thunks.asm"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "native,Version=v0.0": [
+      "Microsoft.Windows.CppWinRT >= 2.0.190506.1"
+    ]
+  },
+  "packageFolders": {
+    "D:\\.nuget\\packages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\Personal\\MSBuild.Sdk.Cpp\\test\\TestApp\\TestApp.csproj",
+      "projectName": "TestApp",
+      "projectPath": "D:\\Personal\\MSBuild.Sdk.Cpp\\test\\TestApp\\TestApp.csproj",
+      "packagesPath": "D:\\.nuget\\packages",
+      "outputPath": "D:\\Personal\\MSBuild.Sdk.Cpp\\obj\\x64\\Debug\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\jlaans\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\NuGet.config"
+      ],
+      "originalTargetFrameworks": [
+        "native"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "native": {
+          "projectReferences": {}
+        }
+      }
+    },
+    "frameworks": {
+      "native": {
+        "dependencies": {
+          "Microsoft.Windows.CppWinRT": {
+            "target": "Package",
+            "version": "[2.0.190506.1, )"
+          }
+        },
+        "imports": [
+          "net461"
+        ],
+        "assetTargetFallback": true,
+        "warn": true
+      }
+    },
+    "runtimes": {
+      "win10-arm": {
+        "#import": []
+      },
+      "win10-arm-aot": {
+        "#import": []
+      },
+      "win10-arm64-aot": {
+        "#import": []
+      },
+      "win10-x64": {
+        "#import": []
+      },
+      "win10-x64-aot": {
+        "#import": []
+      },
+      "win10-x86": {
+        "#import": []
+      },
+      "win10-x86-aot": {
+        "#import": []
+      }
+    }
+  }
+}
