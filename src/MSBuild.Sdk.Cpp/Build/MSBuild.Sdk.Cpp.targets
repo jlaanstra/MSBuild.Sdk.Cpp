@@ -15,9 +15,11 @@
         <_ImportMicrosoftCppDesignTime>false</_ImportMicrosoftCppDesignTime>
     </PropertyGroup>
 
-    <ItemGroup>
-        <ProjectCapability Include="ProjectConfigurationsDeclaredAsItems" />
-    </ItemGroup>
+    <Import Project="..\targets\Microsoft.NET.Sdk.Common.targets" Sdk="Microsoft.NET.Sdk" />
+
+    <ImportGroup>
+        <Import Project="$(MSBuildThisFileDirectory)PackageDependencyResolution.targets" Condition="Exists('$(MSBuildThisFileDirectory)PackageDependencyResolution.targets')" />
+    </ImportGroup>
 
     <Import Project="$(MSBuildThisFileDirectory)DisableManagedFrameworkResolution.targets"/>
 
