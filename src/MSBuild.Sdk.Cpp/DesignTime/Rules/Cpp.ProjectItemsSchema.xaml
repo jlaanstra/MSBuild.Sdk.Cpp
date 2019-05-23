@@ -1,0 +1,43 @@
+<ProjectSchemaDefinitions xmlns="http://schemas.microsoft.com/build/2009/properties">
+
+    <ContentType
+        Name="HeaderFile"
+        DisplayName="C++ Header file"
+        ItemType="ClInclude" />
+
+    <ContentType
+        Name="CFile"
+        DisplayName="C Code file"
+        ItemType="ClCompile" />
+
+    <ContentType
+        Name="CppFile"
+        DisplayName="C++ Code file"
+        ItemType="ClCompile" />
+
+    <ContentType
+        Name="MidlFile"
+        DisplayName="IDL file"
+        ItemType="Midl" />
+
+    <ContentType
+        Name="Natvis"
+        DisplayName="C++ debugger visualization file"
+        ItemType="Natvis" />
+
+    <ItemType Name="ClCompile" DisplayName="C++ compiler" />
+    <ItemType Name="ClInclude" DisplayName="C++ compiler" />
+    <ItemType Name="Midl" DisplayName="Midl compiler" />
+    <ItemType Name="Natvis" DisplayName="C++ debugger visualization file" />
+
+    <FileExtension Name=".h" ContentType="HeaderFile" />
+    <FileExtension Name=".hpp" ContentType="HeaderFile" />
+    <FileExtension Name=".hxx" ContentType="HeaderFile" />
+    <FileExtension Name=".c" ContentType="CFile" />
+    <FileExtension Name=".cpp" ContentType="CppFile" />
+    <FileExtension Name=".cxx" ContentType="CppFile" />
+    <FileExtension Name=".idl" ContentType="MidlFile" />
+
+    <FileExtension Name=".natvis" ContentType="Natvis" />
+
+</ProjectSchemaDefinitions>

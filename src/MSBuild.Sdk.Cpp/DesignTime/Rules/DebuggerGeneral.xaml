@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--  Copyright (c) Microsoft.  All Rights Reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.  -->
+<Rule
+    xmlns="http://schemas.microsoft.com/build/2009/properties"
+    Name="DebuggerGeneralProperties"
+    Description="General Debugger options"
+    DisplayName="Debugger General Properties">
+    <Rule.DataSource>
+        <DataSource Persistence="UserFile" SourceOfDefaultValue="AfterContext" />
+    </Rule.DataSource>
+
+    <StringProperty Name="DebuggerFlavor" Visible="false" />
+
+    <EnumProperty Name="ImageClrType" Visible="false">
+        <EnumProperty.DataSource>
+            <DataSource
+                HasConfigurationCondition="false"
+                PersistedName="_TargetImageClrType"
+                Persistence="UserFile"
+                SourceOfDefaultValue="AfterContext" />
+        </EnumProperty.DataSource>
+        <EnumValue Name="Native" />
+        <EnumValue Name="Mixed" />
+        <EnumValue Name="Managed" />
+    </EnumProperty>
+
+    <StringProperty
+        Name="SymbolsPath"
+        Description="The search path used by the debugger to locate symbols."
+        DisplayName="Symbol Search Path" />
+
+</Rule>

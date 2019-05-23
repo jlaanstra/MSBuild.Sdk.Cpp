@@ -1,27 +1,31 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
-  <PropertyGroup>
-    <MSBuildAllProjects Condition=" '$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0' ">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
-  </PropertyGroup>
+    <PropertyGroup>
+        <MSBuildAllProjects Condition=" '$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0' ">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    </PropertyGroup>
 
     <ItemGroup Condition=" '$(EnableDefaultItems)' == 'true' ">
         <AppxManifest Include="Package.appxmanifest" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" />
     </ItemGroup>
 
-  <ItemDefinitionGroup>
-    <Page>
-      <SubType>Designer</SubType>
-    </Page>
-    <Resource>
-      <SubType>Designer</SubType>
-    </Resource>
-    <ApplicationDefinition>
-      <SubType>Designer</SubType>
-    </ApplicationDefinition>
-      <AppxManifest>
-          <SubType>Designer</SubType>
-      </AppxManifest>
-  </ItemDefinitionGroup>
+    <ItemDefinitionGroup>
+        <Page>
+            <SubType>Designer</SubType>
+            <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+        </Page>
+        <PRIResource>
+            <SubType>Designer</SubType>
+            <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+        </PRIResource>
+        <ApplicationDefinition>
+            <SubType>Designer</SubType>
+            <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+        </ApplicationDefinition>
+        <AppxManifest>
+            <SubType>Designer</SubType>
+            <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+        </AppxManifest>
+    </ItemDefinitionGroup>
 
     <ItemGroup>
         <None Remove="$(ApplicationDefinitionFile)"/>

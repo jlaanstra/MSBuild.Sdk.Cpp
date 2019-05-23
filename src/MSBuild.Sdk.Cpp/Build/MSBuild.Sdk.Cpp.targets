@@ -8,13 +8,22 @@
         <DefaultLanguageSourceExtension>.cpp</DefaultLanguageSourceExtension>
         <Language>C++</Language>
         <TargetRuntime>Native</TargetRuntime>
+
+        <!-- C++ specific -->
+        <!-- turn off the default native property schemas defined in Microsoft.CppBuild.targets -->
+        <UseDefaultPropertyPageSchemas>false</UseDefaultPropertyPageSchemas>
+        <_ImportMicrosoftCppDesignTime>false</_ImportMicrosoftCppDesignTime>
     </PropertyGroup>
 
-    <Import Project="$(MSBuildThisFileDirectory)DisableManagedFrameworkResolution.targets"/>
-    <Import Project="$(MSBuildThisFileDirectory)DesignTime.targets"/>
+    <ItemGroup>
+        <ProjectCapability Include="ProjectConfigurationsDeclaredAsItems" />
+    </ItemGroup>
 
+    <Import Project="$(MSBuildThisFileDirectory)DisableManagedFrameworkResolution.targets"/>
+
+    <!--<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.CurrentVersion.targets"/>-->
+    <Import Project="$(MSBuildThisFileDirectory)..\DesignTime\DesignTime.targets"/>
     <Import Project="$(MSBuildThisFileDirectory)..\DefaultItems\DefaultItems.targets"/>
-    <Import Project="$(MSBuildThisFileDirectory)..\ProjectSystem\ProjectSystem.targets"/>
 
     <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
 
