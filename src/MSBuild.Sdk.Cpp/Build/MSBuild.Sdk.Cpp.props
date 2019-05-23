@@ -42,9 +42,9 @@
         <PlatformToolset Condition="'$(PlatformToolset)' == ''">v140</PlatformToolset>
         <CharacterSet Condition="'$(CharacterSet)' == ''">Unicode</CharacterSet>
         <TargetFrameworkIdentifier>native</TargetFrameworkIdentifier>
-        <TargetFrameworkIdentifier>native</TargetFrameworkIdentifier>
+        <TargetFrameworkVersion>v0.0</TargetFrameworkVersion>
         <TargetFramework>native,Version=v0.0</TargetFramework>
-        <NuGetTargetMoniker>native,Version=v0.0</NuGetTargetMoniker>
+        <TargetFrameworkMoniker>native,Version=v0.0</TargetFrameworkMoniker>
 
         <!-- NuGet should always restore .NET SDK projects with "PackageReference" style restore.  Setting this property will
          cause the right thing to happen even if there aren't any PackageReference items in the project, such as when

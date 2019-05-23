@@ -13,12 +13,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Update="DesignTime\Rules\AnalyzerReference.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </None>
-    <None Update="DesignTime\Rules\AppDesigner.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </None>
     <None Update="DesignTime\Rules\ApplicationDefinition.BrowseObject.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
@@ -52,16 +46,10 @@
     <None Update="DesignTime\Rules\Cpp.ProjectItemsSchema - Copy.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
-    <None Update="DesignTime\Rules\CSharp.ProjectItemsSchema.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </None>
     <None Update="DesignTime\Rules\DebuggerGeneral.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
     <None Update="DesignTime\Rules\Default.ProjectItemsSchema.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </None>
-    <None Update="DesignTime\Rules\DotNetCliToolReference.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
     <None Update="DesignTime\Rules\Folder.xaml">
@@ -101,9 +89,6 @@
       <Generator>MSBuild:Compile</Generator>
     </None>
     <None Update="DesignTime\Rules\ProjectReference.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </None>
-    <None Update="DesignTime\Rules\ResolvedAnalyzerReference.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
     <None Update="DesignTime\Rules\ResolvedAssemblyReference.xaml">

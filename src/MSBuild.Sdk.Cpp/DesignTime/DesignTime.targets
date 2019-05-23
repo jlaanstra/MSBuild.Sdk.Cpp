@@ -92,40 +92,10 @@
         <PropertyPageSchema Include="$(XamlProjectSystemRulesDirectory)Appx.ProjectItemsSchema.xaml">
             <Context>Project</Context>
         </PropertyPageSchema>
-
-        <!--<PropertyPageSchema Include="
-                            $(XamlProjectSystemRulesDirectory)PRIResource.xaml;
-                            $(XamlProjectSystemRulesDirectory)ApplicationDefinition.xaml;
-                            $(XamlProjectSystemRulesDirectory)Page.xaml;
-                            $(XamlProjectSystemRulesDirectory)AppxManifest.xaml;
-                            ">
-            <Context>File;BrowseObject</Context>
-        </PropertyPageSchema>-->
-
-        <!--<PropertyPageSchema Include="$(XamlProjectSystemRulesDirectory)Content.xaml">
-            <Context>File</Context>
-        </PropertyPageSchema>
-
-        <PropertyPageSchema Include="$(XamlProjectSystemRulesDirectory)Content.BrowseObject.xaml">
-            <Context>BrowseObject</Context>
-        </PropertyPageSchema>-->
     </ItemGroup>
     
     <!-- Common Project System rules that override rules defined in msbuild. These are exact copy of the rules defined in msbuild. -->
     <ItemGroup>
-        <!-- Files/Folders schema -->
-        <!--<PropertyPageSchema Include="$(XamlProjectSystemRulesDirectory)ProjectItemsSchema.xaml">
-            <Context>Project</Context>
-        </PropertyPageSchema>-->
-
-        <!-- Files/Folders -->
-        <!--<PropertyPageSchema Include="$(XamlProjectSystemRulesDirectory)AdditionalFiles.xaml">
-            <Context>File</Context>
-        </PropertyPageSchema>
-
-        <PropertyPageSchema Include="$(XamlProjectSystemRulesDirectory)AdditionalFiles.BrowseObject.xaml">
-            <Context>BrowseObject</Context>
-        </PropertyPageSchema>-->
 
         <PropertyPageSchema Include="$(XamlProjectSystemRulesDirectory)ApplicationDefinition.xaml">
             <Context>File</Context>
@@ -151,14 +121,6 @@
             <Context>BrowseObject</Context>
         </PropertyPageSchema>
 
-        <!--<PropertyPageSchema Include="$(XamlProjectSystemRulesDirectory)EmbeddedResource.xaml">
-            <Context>File</Context>
-        </PropertyPageSchema>
-
-        <PropertyPageSchema Include="$(XamlProjectSystemRulesDirectory)EmbeddedResource.BrowseObject.xaml">
-            <Context>BrowseObject</Context>
-        </PropertyPageSchema>-->
-
         <PropertyPageSchema Include="$(XamlProjectSystemRulesDirectory)Folder.xaml">
             <Context>File;BrowseObject</Context>
         </PropertyPageSchema>
@@ -181,27 +143,6 @@
 
         <PropertyPageSchema Include="$(XamlProjectSystemRulesDirectory)SpecialFolder.xaml">
             <Context>File;ProjectSubscriptionService</Context>
-        </PropertyPageSchema>
-
-        <!--<PropertyPageSchema Include="$(XamlProjectSystemRulesDirectory)XamlAppDef.xaml">
-            <Context>File</Context>
-        </PropertyPageSchema>
-
-        <PropertyPageSchema Include="$(XamlProjectSystemRulesDirectory)XamlAppDef.BrowseObject.xaml">
-            <Context>BrowseObject</Context>
-        </PropertyPageSchema>
-
-        <PropertyPageSchema Include="$(XamlProjectSystemRulesDirectory)Resource.xaml">
-            <Context>File</Context>
-        </PropertyPageSchema>
-
-        <PropertyPageSchema Include="$(XamlProjectSystemRulesDirectory)Resource.BrowseObject.xaml">
-            <Context>BrowseObject</Context>
-        </PropertyPageSchema>-->
-
-        <!-- Project related settings -->
-        <PropertyPageSchema Include="$(XamlProjectSystemRulesDirectory)AppDesigner.xaml">
-            <Context>ProjectSubscriptionService</Context>
         </PropertyPageSchema>
 
         <PropertyPageSchema Include="$(XamlProjectSystemRulesDirectory)CompilerCommandLineArgs.xaml">
@@ -310,20 +251,6 @@
             <Context>ProjectSubscriptionService;BrowseObject</Context>
         </PropertyPageSchema>
 
-        <!-- Tool references -->
-        <PropertyPageSchema Include="$(XamlProjectSystemRulesDirectory)DotNetCliToolReference.xaml">
-            <Context>ProjectSubscriptionService;BrowseObject</Context>
-        </PropertyPageSchema>
-
-        <!-- Analyzer references -->
-        <PropertyPageSchema Include="$(XamlProjectSystemRulesDirectory)AnalyzerReference.xaml">
-            <Context>Project;ProjectSubscriptionService;BrowseObject</Context>
-        </PropertyPageSchema>
-
-        <PropertyPageSchema Include="$(XamlProjectSystemRulesDirectory)ResolvedAnalyzerReference.xaml">
-            <Context>ProjectSubscriptionService;BrowseObject</Context>
-        </PropertyPageSchema>
-
     </ItemGroup>
 
     <!-- List of external files that trigger design-time builds when they are modified -->
@@ -342,9 +269,6 @@
     <Target Name="CollectResolvedSDKReferencesDesignTime" />
 
     <Target Name="CompileDesignTime"  />
-
-    <!-- This target collects all Analyzers in the project. -->
-    <Target Name="CollectAnalyzersDesignTime" DependsOnTargets="CompileDesignTime" Returns="@(Analyzer)" />
 
     <!-- This target collects all the resolved references that are used to actually compile. -->
     <Target Name="CollectResolvedCompilationReferencesDesignTime" DependsOnTargets="CompileDesignTime" Returns="@(ReferencePathWithRefAssemblies)" />
